@@ -1,0 +1,2 @@
+"use client"; import { useState } from "react"; import { useRouter } from "next/navigation"; import { Button } from "@/components/ui/button"; import { apiUrl } from "@/lib/utils";
+export default function RunButton({projectId}:{projectId:number}){const [busy,setBusy]=useState(false); const router=useRouter(); async function run(){setBusy(true); const r=await fetch(`${apiUrl}/projects/${projectId}/runs`,{method:"POST"}); const data=await r.json(); router.push(`/runs/${data.id}`)} return <Button disabled={busy} onClick={run}>{busy?"Running...":"Run pipeline"}</Button>}

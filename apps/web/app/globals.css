@@ -1,0 +1,4 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+:root { --background: 220 24% 6%; --foreground: 210 40% 98%; --border: 215 18% 20%; }
+body { @apply bg-background text-foreground antialiased; }
+.card { @apply rounded-2xl border border-white/10 bg-white/[0.04] shadow-2xl shadow-black/20 backdrop-blur; }
