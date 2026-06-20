@@ -1,0 +1,3 @@
+import "./globals.css"; import Link from "next/link"; import type { Metadata } from "next";
+export const metadata: Metadata = { title: "FlowForge AI", description: "Lightweight AI-assisted CI/CD for small teams" };
+export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="en" className="dark"><body><nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5"><Link href="/" className="font-bold tracking-tight">FlowForge AI</Link><div className="flex gap-4 text-sm text-slate-300"><Link href="/projects">Projects</Link><a href="http://localhost:8000/docs">API</a></div></nav>{children}</body></html>}
